@@ -1,24 +1,36 @@
 import { Box, Button, Container, Paper, Typography } from "@mui/material";
 import React, { useState, useEffect, Fragment } from "react";
 import LogoutIcon from "@mui/icons-material/Logout";
+import {useDispatch, useSelector} from 'react-redux';
+import {logoutUser, reset} from '../../features/auth/authSlice'
+import { useNavigate } from "react-router-dom";
+
 
 const Logout = () => {
-  const [loading, setLoading] = useState(false);
+
+  const dispatch  = useDispatch();
+  const navigate = useNavigate();
+
+  const { user, isLoading, isSuccess, message, isError } = useSelector(
+    (state) => state.auth
+  );
 
   const submitLogout = async () => {
-    
+    dispatch(logoutUser())
+    dispatch(reset());
+    navigate("/");
   }
 
   return (
     <Box className="bg-shapes">
-      {loading === false && (
+      {isLoading === false && (
         <Container
           component="main"
           maxWidth="sm"
           sx={{ minHeight: "90vh" }}
           style={{ display: "flex", justifyContent: "center" }}
         >
-          {loading === false && (
+          {isLoading === false && (
             <Paper
               style={
                 {

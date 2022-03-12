@@ -69,7 +69,6 @@ const TeacherDashboard = () => {
                   name="email"
                   type="email"
                   margin="dense"
-                  label="Email"
                   size="small"
                   id="standard-basic"
                   variant="standard"
@@ -80,291 +79,26 @@ const TeacherDashboard = () => {
                   {" "}
                   <Grid item>
                     <Chip
-                      label="Clickable"
+                      label="class 1"
                       variant="outlined"
                       onClick={() => {}}
                     />
                   </Grid>
                   <Grid item>
                     <Chip
-                      label="Clickable"
-                      variant="outlined"
-                      onClick={() => {}}
-                    />
-                  </Grid>{" "}
-                  <Grid item>
-                    <Chip
-                      label="Clickable"
-                      variant="outlined"
-                      onClick={() => {}}
-                    />
-                  </Grid>{" "}
-                  <Grid item>
-                    <Chip
-                      label="Clickable"
-                      variant="outlined"
-                      onClick={() => {}}
-                    />
-                  </Grid>{" "}
-                  <Grid item>
-                    <Chip
-                      label="Clickable"
-                      variant="outlined"
-                      onClick={() => {}}
-                    />
-                  </Grid>{" "}
-                  <Grid item>
-                    <Chip
-                      label="Clickable"
-                      variant="outlined"
-                      onClick={() => {}}
-                    />
-                  </Grid>{" "}
-                  <Grid item>
-                    <Chip
-                      label="Clickable"
-                      variant="outlined"
-                      onClick={() => {}}
-                    />
-                  </Grid>{" "}
-                  <Grid item>
-                    <Chip
-                      label="Clickable"
-                      variant="outlined"
-                      onClick={() => {}}
-                    />
-                  </Grid>{" "}
-                  <Grid item>
-                    <Chip
-                      label="Clickable"
-                      variant="outlined"
-                      onClick={() => {}}
-                    />
-                  </Grid>{" "}
-                  <Grid item>
-                    <Chip
-                      label="Clickable"
-                      variant="outlined"
-                      onClick={() => {}}
-                    />
-                  </Grid>{" "}
-                  <Grid item>
-                    <Chip
-                      label="Clickable"
-                      variant="outlined"
-                      onClick={() => {}}
-                    />
-                  </Grid>{" "}
-                  <Grid item>
-                    <Chip
-                      label="Clickable"
-                      variant="outlined"
-                      onClick={() => {}}
-                    />
-                  </Grid>{" "}
-                  <Grid item>
-                    <Chip
-                      label="Clickable"
-                      variant="outlined"
-                      onClick={() => {}}
-                    />
-                  </Grid>{" "}
-                  <Grid item>
-                    <Chip
-                      label="Clickable"
-                      variant="outlined"
-                      onClick={() => {}}
-                    />
-                  </Grid>{" "}
-                  <Grid item>
-                    <Chip
-                      label="Clickable"
-                      variant="outlined"
-                      onClick={() => {}}
-                    />
-                  </Grid>{" "}
-                  <Grid item>
-                    <Chip
-                      label="Clickable"
-                      variant="outlined"
-                      onClick={() => {}}
-                    />
-                  </Grid>{" "}
-                  <Grid item>
-                    <Chip
-                      label="Clickable"
-                      variant="outlined"
-                      onClick={() => {}}
-                    />
-                  </Grid>{" "}
-                  <Grid item>
-                    <Chip
-                      label="Clickable"
-                      variant="outlined"
-                      onClick={() => {}}
-                    />
-                  </Grid>{" "}
-                  <Grid item>
-                    <Chip
-                      label="Clickable"
-                      variant="outlined"
-                      onClick={() => {}}
-                    />
-                  </Grid>{" "}
-                  <Grid item>
-                    <Chip
-                      label="Clickable"
-                      variant="outlined"
-                      onClick={() => {}}
-                    />
-                  </Grid>{" "}
-                  <Grid item>
-                    <Chip
-                      label="Clickable"
-                      variant="outlined"
-                      onClick={() => {}}
-                    />
-                  </Grid>{" "}
-                  <Grid item>
-                    <Chip
-                      label="Clickable"
-                      variant="outlined"
-                      onClick={() => {}}
-                    />
-                  </Grid>{" "}
-                  <Grid item>
-                    <Chip
-                      label="Clickable"
-                      variant="outlined"
-                      onClick={() => {}}
-                    />
-                  </Grid>{" "}
-                  <Grid item>
-                    <Chip
-                      label="Clickable"
-                      variant="outlined"
-                      onClick={() => {}}
-                    />
-                  </Grid>{" "}
-                  <Grid item>
-                    <Chip
-                      label="Clickable"
-                      variant="outlined"
-                      onClick={() => {}}
-                    />
-                  </Grid>{" "}
-                  <Grid item>
-                    <Chip
-                      label="Clickable"
-                      variant="outlined"
-                      onClick={() => {}}
-                    />
-                  </Grid>{" "}
-                  <Grid item>
-                    <Chip
-                      label="Clickable"
-                      variant="outlined"
-                      onClick={() => {}}
-                    />
-                  </Grid>{" "}
-                  <Grid item>
-                    <Chip
-                      label="Clickable"
-                      variant="outlined"
-                      onClick={() => {}}
-                    />
-                  </Grid>{" "}
-                  <Grid item>
-                    <Chip
-                      label="Clickable"
-                      variant="outlined"
-                      onClick={() => {}}
-                    />
-                  </Grid>{" "}
-                  <Grid item>
-                    <Chip
-                      label="Clickable"
-                      variant="outlined"
-                      onClick={() => {}}
-                    />
-                  </Grid>{" "}
-                  <Grid item>
-                    <Chip
-                      label="Clickable"
-                      variant="outlined"
-                      onClick={() => {}}
-                    />
-                  </Grid>{" "}
-                  <Grid item>
-                    <Chip
-                      label="Clickable"
-                      variant="outlined"
-                      onClick={() => {}}
-                    />
-                  </Grid>{" "}
-                  <Grid item>
-                    <Chip
-                      label="Clickable"
-                      variant="outlined"
-                      onClick={() => {}}
-                    />
-                  </Grid>{" "}
-                  <Grid item>
-                    <Chip
-                      label="Clickable"
-                      variant="outlined"
-                      onClick={() => {}}
-                    />
-                  </Grid>{" "}
-                  <Grid item>
-                    <Chip
-                      label="Clickable"
-                      variant="outlined"
-                      onClick={() => {}}
-                    />
-                  </Grid>{" "}
-                  <Grid item>
-                    <Chip
-                      label="Clickable"
-                      variant="outlined"
-                      onClick={() => {}}
-                    />
-                  </Grid>{" "}
-                  <Grid item>
-                    <Chip
-                      label="Clickable"
-                      variant="outlined"
-                      onClick={() => {}}
-                    />
-                  </Grid>{" "}
-                  <Grid item>
-                    <Chip
-                      label="Clickable"
-                      variant="outlined"
-                      onClick={() => {}}
-                    />
-                  </Grid>{" "}
-                  <Grid item>
-                    <Chip
-                      label="Clickable"
-                      variant="outlined"
-                      onClick={() => {}}
-                    />
-                  </Grid>{" "}
-                  <Grid item>
-                    <Chip
-                      label="Clickable"
-                      variant="outlined"
-                      onClick={() => {}}
-                    />
-                  </Grid>{" "}
-                  <Grid item>
-                    <Chip
-                      label="Clickable"
+                      label="class 2"
                       variant="outlined"
                       onClick={() => {}}
                     />
                   </Grid>
+                  <Grid item>
+                    <Chip
+                      label="class 3"
+                      variant="outlined"
+                      onClick={() => {}}
+                    />
+                  </Grid>
+                 
                 </Grid>
               </Container>
             </Paper>

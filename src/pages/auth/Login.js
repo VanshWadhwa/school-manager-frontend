@@ -20,6 +20,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { loginUser } from "../../features/auth/authSlice";
 import MiniDrawer from "../../components/layout/MiniDrawer";
 
+
 const Login = () => {
   const [loading, setLoading] = useState(false);
   const dispatch = useDispatch();
@@ -38,11 +39,8 @@ const Login = () => {
       enqueueSnackbar(message, { variant: "error" });
     }
     if (isSuccess) {
-      if (user.role === "school") {
         navigate("/school/dashboard");
-      } else if (user.role === "student") {
-        navigate("/");
-      }
+      
     }
   }, [isSuccess, message, isError]);
 
