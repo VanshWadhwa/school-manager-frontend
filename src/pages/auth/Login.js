@@ -40,11 +40,8 @@ const Login = () => {
       enqueueSnackbar(message, {variant: "error"})
     }
     if(isSuccess) {
-      if(user.role === 'school'){
-        navigate('/dashboard');
-      }else if(user.role === 'student'){
-        navigate('/')
-      }
+      navigate('/dashboard');
+    
     }
   
   }, [isSuccess, message, isError])
