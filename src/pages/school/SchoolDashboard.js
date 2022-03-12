@@ -24,8 +24,8 @@ import React, { useState } from "react";
 
 const SchoolDashboard = () => {
   const [loading, setloading] = useState(false);
-  function createData(name, calories, fat, carbs, protein) {
-    return { name, calories, fat, carbs, protein };
+  function createData(name, subject, role) {
+    return { name, subject, role };
   }
 
   const classes = [
@@ -57,12 +57,70 @@ const SchoolDashboard = () => {
     "12 - b",
   ];
 
+  const students = [
+    {
+      name: "Rajib Mondal",
+      rollNumber: "1",
+      enrollNumber: "12456",
+      dob: "22/1/2002",
+      phoneNumber: "7841516541",
+    },
+    {
+      name: "Saif",
+      rollNumber: "2",
+      enrollNumber: "54654",
+      dob: "1/5/2002",
+      phoneNumber: "785465345",
+    },
+    {
+      name: "Devesh",
+      rollNumber: "3",
+      enrollNumber: "56465435",
+      dob: "24/5/2001",
+      phoneNumber: "988621212",
+    },
+    {
+      name: "Vansh",
+      rollNumber: "3",
+      enrollNumber: "564654",
+      dob: "12/12/2002",
+      phoneNumber: "7841516541",
+    },
+    {
+      name: "Rajib Mondal",
+      rollNumber: "1",
+      enrollNumber: "12456",
+      dob: "22/1/2002",
+      phoneNumber: "7841516541",
+    },
+    {
+      name: "Saif",
+      rollNumber: "2",
+      enrollNumber: "54654",
+      dob: "1/5/2002",
+      phoneNumber: "785465345",
+    },
+    {
+      name: "Devesh",
+      rollNumber: "3",
+      enrollNumber: "56465435",
+      dob: "24/5/2001",
+      phoneNumber: "988621212",
+    },
+    {
+      name: "Vansh",
+      rollNumber: "3",
+      enrollNumber: "564654",
+      dob: "12/12/2002",
+      phoneNumber: "7841516541",
+    },
+  ];
+
   const rows = [
-    createData("Frozen yoghurt", 159, 6.0, 24, 4.0),
-    createData("Ice cream sandwich", 237, 9.0, 37, 4.3),
-    createData("Eclair", 262, 16.0, 24, 6.0),
-    createData("Cupcake", 305, 3.7, 67, 4.3),
-    createData("Gingerbread", 356, 16.0, 49, 3.9),
+    createData("Jaya", "Hindi", "Class Teacher"),
+    createData("Reema", "English", "-"),
+    createData("Sushma", "Maths", "-"),
+    createData("Reekha", "Science", "-"),
   ];
   return (
     <Box className="bg-shapes">
@@ -140,21 +198,19 @@ const SchoolDashboard = () => {
               >
                 {" "}
                 <Typography component="h6" variant="h6">
-                  Class 12-A ( Sanjay Sir )
+                  Teachers of 12-A
                 </Typography>
                 <TableContainer component={Paper}>
                   <Table
-                    sx={{ minWidth: 650 }}
+                    // sx={{ minWidth: 650 }}
                     size="small"
                     aria-label="a dense table"
                   >
                     <TableHead>
                       <TableRow>
-                        <TableCell>Dessert (100g serving)</TableCell>
-                        <TableCell align="right">Calories</TableCell>
-                        <TableCell align="right">Fat&nbsp;(g)</TableCell>
-                        <TableCell align="right">Carbs&nbsp;(g)</TableCell>
-                        <TableCell align="right">Protein&nbsp;(g)</TableCell>
+                        <TableCell align="right">Name</TableCell>
+                        <TableCell align="right">Subject</TableCell>
+                        <TableCell align="right">Other Role</TableCell>
                       </TableRow>
                     </TableHead>
                     <TableBody>
@@ -168,10 +224,8 @@ const SchoolDashboard = () => {
                           <TableCell component="th" scope="row">
                             {row.name}
                           </TableCell>
-                          <TableCell align="right">{row.calories}</TableCell>
-                          <TableCell align="right">{row.fat}</TableCell>
-                          <TableCell align="right">{row.carbs}</TableCell>
-                          <TableCell align="right">{row.protein}</TableCell>
+                          <TableCell align="right">{row.subject}</TableCell>
+                          <TableCell align="right">{row.role}</TableCell>
                         </TableRow>
                       ))}
                     </TableBody>
@@ -217,28 +271,34 @@ const SchoolDashboard = () => {
                   >
                     <TableHead>
                       <TableRow>
-                        <TableCell>Dessert (100g serving)</TableCell>
-                        <TableCell align="right">Calories</TableCell>
-                        <TableCell align="right">Fat&nbsp;(g)</TableCell>
-                        <TableCell align="right">Carbs&nbsp;(g)</TableCell>
-                        <TableCell align="right">Protein&nbsp;(g)</TableCell>
+                        <TableCell>Name</TableCell>
+                        <TableCell align="right">Roll Number</TableCell>
+                        <TableCell align="right">Enroll Number</TableCell>
+                        <TableCell align="right">DOB</TableCell>
+                        <TableCell align="right">Phone Number</TableCell>
                       </TableRow>
                     </TableHead>
                     <TableBody>
-                      {rows.map((row) => (
+                      {students.map((student) => (
                         <TableRow
-                          key={row.name}
+                          key={student.name}
                           sx={{
                             "&:last-child td, &:last-child th": { border: 0 },
                           }}
                         >
                           <TableCell component="th" scope="row">
-                            {row.name}
+                            {student.name}
                           </TableCell>
-                          <TableCell align="right">{row.calories}</TableCell>
-                          <TableCell align="right">{row.fat}</TableCell>
-                          <TableCell align="right">{row.carbs}</TableCell>
-                          <TableCell align="right">{row.protein}</TableCell>
+                          <TableCell align="right">
+                            {student.rollNumber}
+                          </TableCell>
+                          <TableCell align="right">
+                            {student.enrollNumber}
+                          </TableCell>
+                          <TableCell align="right">{student.dob}</TableCell>
+                          <TableCell align="right">
+                            {student.phoneNumber}
+                          </TableCell>
                         </TableRow>
                       ))}
                     </TableBody>
