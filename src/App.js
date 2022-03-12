@@ -1,6 +1,7 @@
 import Login from "./pages/auth/Login.js";
 import Logout from "./pages/auth/Logout.js";
 import Signup from "./pages/auth/Signup.js";
+import Notice from "./pages/Notice.js";
 
 import Home from "./pages/Home.js";
 
