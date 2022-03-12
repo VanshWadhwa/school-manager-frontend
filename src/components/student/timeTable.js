@@ -6,6 +6,7 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import "./timeTable.css";
 
 function TimeTable() {
 
@@ -25,35 +26,85 @@ function TimeTable() {
     <div className='pl-10 mt-14'>
         <h1 className='text-[#2d2d2e] text-3xl border-b-2'>Time Table</h1>
         <h3 className='py-4 text-xl '>Class: <span className='text-[#5d5d5d]'>9 C</span></h3>
-        <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 650 }} aria-label="simple table">
-        <TableHead>
-          <TableRow>
-            <TableCell>Dessert (100g serving)</TableCell>
-            <TableCell align="right">Calories</TableCell>
-            <TableCell align="right">Fat&nbsp;(g)</TableCell>
-            <TableCell align="right">Carbs&nbsp;(g)</TableCell>
-            <TableCell align="right">Protein&nbsp;(g)</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {rows.map((row) => (
-            <TableRow
-              key={row.name}
-              sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-            >
-              <TableCell component="th" scope="row">
-                {row.name}
-              </TableCell>
-              <TableCell align="right">{row.calories}</TableCell>
-              <TableCell align="right">{row.fat}</TableCell>
-              <TableCell align="right">{row.carbs}</TableCell>
-              <TableCell align="right">{row.protein}</TableCell>
-            </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
+        
+<table class="border-collapse border border-slate-400 text-xl">
+  <thead>
+    <tr>
+      <th class="border border-slate-300 italic">Days&#8595;/Time&#8594;</th>
+      <th class="border border-slate-300">08:00-09:00</th>
+      <th class="border border-slate-300">09:00-10:00</th>
+      <th class="border border-slate-300">10:00-11:00</th>
+      <th class="border border-slate-300">Lunch<br></br>(11-11:30)</th>
+      <th class="border border-slate-300">11:30-12:15</th>
+      <th class="border border-slate-300">12:15-01:00</th>
+      <th class="border border-slate-300">01:00-02:00</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th class="border border-slate-300">Monday</th>
+      <td class="border border-slate-300">English</td>
+      <td class="border border-slate-300">Maths</td>
+      <td class="border border-slate-300">P.T</td>
+      <td class="border border-slate-300"></td>
+      <td class="border border-slate-300">Physics</td>
+      <td class="border border-slate-300">CS</td>
+      <td class="border border-slate-300">Chemistry</td>
+    </tr>
+    <tr>
+      <th class="border border-slate-300">Tuesday</th>
+      <td class="border border-slate-300">Maths</td>
+      <td class="border border-slate-300">CS</td>
+      <td class="border border-slate-300">PT</td>
+      <td class="border border-slate-300"></td>
+      <td class="border border-slate-300">Hindi</td>
+      <td class="border border-slate-300">English</td>
+      <td class="border border-slate-300">Physics</td>
+    </tr>
+    <tr>
+      <th class="border border-slate-300">Wednesday</th>
+      <td class="border border-slate-300">Physics</td>
+      <td class="border border-slate-300">Chemistry</td>
+      <td class="border border-slate-300">CS</td>
+      <td class="border border-slate-300"></td>
+      <td class="border border-slate-300">Hindi</td>
+      <td class="border border-slate-300">English</td>
+      <td class="border border-slate-300">Maths</td>
+    </tr>
+    <tr>
+      <th class="border border-slate-300">Thursday</th>
+      <td class="border border-slate-300">Hindi</td>
+      <td class="border border-slate-300">English</td>
+      <td class="border border-slate-300">Maths</td>
+      <td class="border border-slate-300"></td>
+      <td class="border border-slate-300">Maths</td>
+      <td class="border border-slate-300">Physics</td>
+      <td class="border border-slate-300">Chemistry</td>
+    </tr>
+    <tr>
+      <th class="border border-slate-300">Friday</th>
+      <td class="border border-slate-300">PT</td>
+      <td class="border border-slate-300">CS</td>
+      <td class="border border-slate-300">Maths</td>
+      <td class="border border-slate-300"></td>
+      <td class="border border-slate-300">Physics</td>
+      <td class="border border-slate-300">Maths</td>
+      <td class="border border-slate-300">CS</td>
+    </tr>
+    <tr>
+      <th class="border border-slate-300">Saturday</th>
+      <td class="border border-slate-300">Chemistry</td>
+      <td class="border border-slate-300">PT</td>
+      <td class="border border-slate-300">Maths</td>
+      <td class="border border-slate-300"></td>
+      <td class="border border-slate-300">Physics</td>
+      <td class="border border-slate-300">CS</td>
+      <td class="border border-slate-300">Physics</td>
+    </tr>
+  </tbody>
+</table>
+
+
     </div>
   )
 }

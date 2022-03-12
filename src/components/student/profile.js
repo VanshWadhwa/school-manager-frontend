@@ -20,11 +20,11 @@ function Profile() {
                 <div className='bg-cyan-100 text-[#2d2d2e] py-5 px-10 text-2xl rounded-xl shadow-xl font-semibold hover:shadow-none'>Roll No. - 09915603120</div>
             </section>
             <section className='my-10 mx-20 '>
-                <div className='bg-white w-max py-4 px-10 rounded-xl shadow-lg mx-auto hover:shadow-xl'>
-                    <div className='text-xl'>Class Teacher :</div>
-                    <div className='flex items-center gap-4'>
-                        <img className='w-12 h-12 rounded-full' src='https://t3.ftcdn.net/jpg/02/65/18/30/360_F_265183061_NkulfPZgRxbNg3rvYSNGGwi0iD7qbmOp.jpg' />
-                        <div className='text-2xl'>Mr. Mamta Kulkarni</div>
+                <div className='bg-white w-max py-4 px-10 rounded-xl shadow-lg mx-auto hover:shadow-xl flex flex-row'>
+                <img className='w-16 h-14 rounded-full mr-4' src='https://t3.ftcdn.net/jpg/02/65/18/30/360_F_265183061_NkulfPZgRxbNg3rvYSNGGwi0iD7qbmOp.jpg' />
+                    <div className='flex flex-col items-center'>
+                        <div className='text-xl'>Class Teacher :</div>
+                        <div className='text-2xl'>Ms. Mamta Kulkarni</div>
                     </div>
                 </div>
             </section>
