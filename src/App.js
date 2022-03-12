@@ -3,6 +3,7 @@ import Logout from "./pages/auth/Logout.js";
 import Signup from "./pages/auth/Signup.js";
 import SchoolDashboard from "./pages/school/SchoolDashboard.js";
 import TeacherDashboard from "./pages/teacher/TeacherDashboard.js";
+import StudentDashboard from "./pages/student/StudentDashboard.js";
 
 import { SnackbarProvider } from "notistack";
 
@@ -25,6 +26,7 @@ function App() {
             <Route path="/signup" element={<Signup />} />
             <Route path="/School/Dashboard" element={<SchoolDashboard />} />
             <Route path="/teacher/Dashboard" element={<TeacherDashboard />} />
+            <Route path="/student/Dashboard" element={<StudentDashboard />} />
 
             {/* <Route path="invoices" element={<Invoices />} /> */}
           </Routes>
