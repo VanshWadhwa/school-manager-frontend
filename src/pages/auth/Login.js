@@ -1,3 +1,9 @@
+
+import React from "react";
+import {useState, useEffect} from 'react'
+import {registerUser} from '../../features/auth/authSlice'
+import {useDispatch, useSelector} from 'react-redux';
+
 import {
   Button,
   Container,
@@ -10,20 +16,43 @@ import LoginIcon from "@mui/icons-material/Login";
 import { useSnackbar } from "notistack";
 
 import { Box } from "@mui/system";
-import { Link } from "react-router-dom";
-import React, { useState } from "react";
-// import {registerUser} from '../../features/auth/authSlice'
-import { useDispatch } from "react-redux";
+import { Link , useNavigate} from "react-router-dom";
+
+
+import {loginUser} from '../../features/auth/authSlice'
 
 const Login = () => {
   const [loading, setLoading] = useState(false);
+  const dispatch = useDispatch();
   const { enqueueSnackbar, closeSnackbar } = useSnackbar();
+  const navigate = useNavigate();
 
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
 
-  const submitLogin = async () => {
-    
+  const { user, isLoading, isSuccess, message, isError } = useSelector(
+    (state) => state.auth
+  );
+
+  
+  useEffect(() => {
+    if(isError) {
+      enqueueSnackbar(message, {variant: "error"})
+    }
+    if(isSuccess) {
+      if(user.role === 'school'){
+        navigate('/dashboard');
+      }else if(user.role === 'student'){
+        navigate('/')
+      }
+    }
+  
+  }, [isSuccess, message, isError])
+
+  const submitLogin =  (e) => {
+    e.preventDefault();
+    const userData = {email, password};
+    dispatch(loginUser(userData));
   }
 
   return (
@@ -46,7 +75,7 @@ const Login = () => {
             <Typography component="h1" variant="h3">
               Login
             </Typography>
-            <Box component="form" noValidate sx={{ mt: 3 }} onSubmit={submitLogin}>
+            <Box component="form" noValidate  sx={{ mt: 3 }} onSubmit={submitLogin}>
               <TextField
                 required
                 fullWidth
@@ -103,6 +132,7 @@ const Login = () => {
       </Container>
     </Box>
   );
+
 };
 
 export default Login;
