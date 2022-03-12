@@ -39,7 +39,7 @@ const Login = () => {
     }
     if (isSuccess) {
       if (user.role === "school") {
-        navigate("/dashboard");
+        navigate("/school/dashboard");
       } else if (user.role === "student") {
         navigate("/");
       }
