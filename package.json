@@ -4,6 +4,7 @@
   "private": true,
   "proxy": "https://school-manager2022.herokuapp.com",
   "dependencies": {
+    "@alan-ai/alan-sdk-web": "^1.8.30",
     "@emotion/react": "^11.8.2",
     "@emotion/styled": "^11.8.1",
     "@mui/icons-material": "^5.5.0",
