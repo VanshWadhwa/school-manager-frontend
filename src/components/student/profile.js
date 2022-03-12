@@ -1,6 +1,6 @@
 import React from 'react'
 
-function profile() {
+function Profile() {
   return (
     <div>
         <h1 className='text-3xl font-light tracking-wider border-b-2 text-black mt-5 mx-20'>Student Profile</h1>
@@ -22,4 +22,4 @@ function profile() {
   )
 }
 
-export default profile
+export default Profile
