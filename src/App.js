@@ -1,7 +1,8 @@
 import Login from "./pages/auth/Login.js";
 import Logout from "./pages/auth/Logout.js";
 import Signup from "./pages/auth/Signup.js";
-import Dashboard from "./pages/school/Dashboard.js";
+import SchoolDashboard from "./pages/school/SchoolDashboard.js";
+import TeacherDashboard from "./pages/teacher/TeacherDashboard.js";
 
 import { SnackbarProvider } from "notistack";
 
@@ -13,17 +14,18 @@ import MiniDrawer from "./components/layout/MiniDrawer";
 function App() {
   return (
     <div className="App ">
-        {/* <MiniDrawer /> */}
+      {/* <MiniDrawer /> */}
       <SnackbarProvider maxSnack={3}>
         <BrowserRouter>
-          {/* <MiniDrawer /> */}
+          <MiniDrawer />
 
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/logout" element={<Logout />} />
             <Route path="/signup" element={<Signup />} />
-            <Route path="/Dashboard" element={<Dashboard />} />
+            <Route path="/School/Dashboard" element={<SchoolDashboard />} />
+            <Route path="/teacher/Dashboard" element={<TeacherDashboard />} />
 
             {/* <Route path="invoices" element={<Invoices />} /> */}
           </Routes>

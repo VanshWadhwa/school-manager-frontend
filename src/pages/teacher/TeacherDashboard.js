@@ -22,7 +22,7 @@ import { Box } from "@mui/system";
 import { Link } from "react-router-dom";
 import React, { useState } from "react";
 
-const Dashboard = () => {
+const TeacherDashboard = () => {
   const [loading, setloading] = useState(false);
   function createData(name, calories, fat, carbs, protein) {
     return { name, calories, fat, carbs, protein };
@@ -48,7 +48,7 @@ const Dashboard = () => {
       >
         <Grid container component="main">
           <Typography component="h1" variant="h3">
-            Dashboard
+            TeacherDashboard
           </Typography>
           <Grid item lg={12}>
             <Paper
@@ -72,7 +72,6 @@ const Dashboard = () => {
                   label="Email"
                   size="small"
                   id="standard-basic"
-                  label="Search"
                   variant="standard"
                   maxWidth
                 />
@@ -449,7 +448,6 @@ const Dashboard = () => {
                   label="Email"
                   size="small"
                   id="standard-basic"
-                  label="Search"
                   variant="standard"
                   maxWidth
                 />
@@ -515,4 +513,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default TeacherDashboard;
