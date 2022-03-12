@@ -1,4 +1,3 @@
-import "./App.css";
 import Login from "./pages/auth/Login.js";
 import Logout from "./pages/auth/Logout.js";
 import Signup from "./pages/auth/Signup.js";
@@ -23,7 +22,6 @@ function App() {
           {/* <Route path="invoices" element={<Invoices />} /> */}
         </Routes>
       </BrowserRouter>
-      ,
     </div>
   );
 }

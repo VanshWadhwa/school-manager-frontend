@@ -10,6 +10,8 @@ import LoginIcon from "@mui/icons-material/Login";
 import { Box } from "@mui/system";
 import { Link } from "react-router-dom";
 import React, { useState } from "react";
+// import {registerUser} from '../../features/auth/authSlice'
+import { useDispatch } from "react-redux";
 
 const Login = () => {
   const [loading, setLoading] = useState(false);
