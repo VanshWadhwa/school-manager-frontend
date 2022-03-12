@@ -1,8 +1,7 @@
-
 import React from "react";
-import {useState, useEffect} from 'react'
-import {registerUser} from '../../features/auth/authSlice'
-import {useDispatch, useSelector} from 'react-redux';
+import { useState, useEffect } from "react";
+import { registerUser } from "../../features/auth/authSlice";
+import { useDispatch, useSelector } from "react-redux";
 
 import {
   Button,
@@ -16,10 +15,9 @@ import LoginIcon from "@mui/icons-material/Login";
 import { useSnackbar } from "notistack";
 
 import { Box } from "@mui/system";
-import { Link , useNavigate} from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
-
-import {loginUser} from '../../features/auth/authSlice'
+import { loginUser } from "../../features/auth/authSlice";
 
 const Login = () => {
   const [loading, setLoading] = useState(false);
@@ -27,30 +25,29 @@ const Login = () => {
   const { enqueueSnackbar, closeSnackbar } = useSnackbar();
   const navigate = useNavigate();
 
-  const [email, setEmail] = useState("")
-  const [password, setPassword] = useState("")
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const { user, isLoading, isSuccess, message, isError } = useSelector(
     (state) => state.auth
   );
 
-  
   useEffect(() => {
-    if(isError) {
-      enqueueSnackbar(message, {variant: "error"})
+    if (isError) {
+      enqueueSnackbar(message, { variant: "error" });
     }
+
     if(isSuccess) {
       navigate('/dashboard');
     
     }
-  
-  }, [isSuccess, message, isError])
+  }, [isSuccess, message, isError]);
 
-  const submitLogin =  (e) => {
+  const submitLogin = (e) => {
     e.preventDefault();
-    const userData = {email, password};
+    const userData = { email, password };
     dispatch(loginUser(userData));
-  }
+  };
 
   return (
     <Box className="bg-shapes">
@@ -72,7 +69,12 @@ const Login = () => {
             <Typography component="h1" variant="h3">
               Login
             </Typography>
-            <Box component="form" noValidate  sx={{ mt: 3 }} onSubmit={submitLogin}>
+            <Box
+              component="form"
+              noValidate
+              sx={{ mt: 3 }}
+              onSubmit={submitLogin}
+            >
               <TextField
                 required
                 fullWidth
@@ -83,7 +85,7 @@ const Login = () => {
                 variant="outlined"
                 label="Email"
                 size="small"
-                onChange={(e)=> setEmail(e.target.value) }
+                onChange={(e) => setEmail(e.target.value)}
               />
               <TextField
                 required
@@ -95,7 +97,7 @@ const Login = () => {
                 variant="outlined"
                 label="Password"
                 size="small"
-                onChange={(e)=> setPassword(e.target.value) }
+                onChange={(e) => setPassword(e.target.value)}
               />
               <br />
               <br />
@@ -129,7 +131,6 @@ const Login = () => {
       </Container>
     </Box>
   );
-
 };
 
 export default Login;
