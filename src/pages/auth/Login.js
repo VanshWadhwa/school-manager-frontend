@@ -7,6 +7,8 @@ import {
   Typography,
 } from "@mui/material";
 import LoginIcon from "@mui/icons-material/Login";
+import { useSnackbar } from "notistack";
+
 import { Box } from "@mui/system";
 import { Link } from "react-router-dom";
 import React, { useState } from "react";
@@ -15,6 +17,7 @@ import { useDispatch } from "react-redux";
 
 const Login = () => {
   const [loading, setLoading] = useState(false);
+  const { enqueueSnackbar, closeSnackbar } = useSnackbar();
 
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
