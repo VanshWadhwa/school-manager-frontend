@@ -1,10 +1,18 @@
 import React from 'react'
-import Notices from '../../components/student/notices'
-import Profile from '../../components/student/profile'
-import TimeTable from '../../components/student/timeTable'
+import {useState} from 'react'
+import Notices from '../../components/student/Notices'
+import Profile from '../../components/student/Profile'
+import TimeTable from '../../components/student/TimeTable'
 
 
 function Dashboard() {
+    const [selectedMenu, setSelectedMenu] = useState('profile')
+
+    const onMenuClick = (e) => {
+        setSelectedMenu( e.target.attributes.getNamedItem("name").value)
+        // e.target.classList.toggle('bg-[#EAEAF7]');
+    }
+
   return (
     <main className='flex justify-center items-center h-screen w-screen'>
         <section className='bg-[#EAEAF7] h-full w-1/5 flex flex-col justify-between'>
@@ -15,19 +23,22 @@ function Dashboard() {
                     <h3 className='text-center text-sm text-[#6e6e6e] px-2'>Dr. Akhilesh Das Gupta Institute of Technology and management</h3>
                 </div>
                 <div className='flex flex-col w-full mt-10 text-center'>
-                    <div className='bg-white py-2 hover:bg-slate-50 cursor-pointer'>Profile</div>
-                    <div className='py-2 hover:bg-slate-50 cursor-pointer'>Notices</div>
-                    <div className='py-2 hover:bg-slate-50 cursor-pointer'>Time Table</div>
-                    <div className='py-2 hover:bg-slate-50 cursor-pointer'>Attendance</div>
-                    <div className='py-2 hover:bg-slate-50 cursor-pointer'>Assignments</div>
-                    <div className='py-2 hover:bg-slate-50 cursor-pointer'>Calendar</div>
-                    <div className='py-2 hover:bg-slate-50 cursor-pointer'>Pay Fees</div>
+                    <div className={`py-2 ${selectedMenu === 'profile' && 'bg-white'} hover:bg-slate-50 cursor-pointer`} onClick={onMenuClick} name="profile">Profile</div>
+                    <button className={`py-2 ${selectedMenu === 'notices' && 'bg-white'} hover:bg-slate-50 cursor-pointer`} onClick={onMenuClick} name="notices">Notices</button>
+                    <button className={`py-2 ${selectedMenu === 'timeTable' && 'bg-white'} hover:bg-slate-50 cursor-pointer`} onClick={onMenuClick} name="timeTable">Time Table</button>
+                    <button className={`py-2 ${selectedMenu === 'attendence' && 'bg-white'} hover:bg-slate-50 cursor-pointer`} onClick={onMenuClick} name="attendence">Attendance</button>
+                    <button className={`py-2 ${selectedMenu === 'assignments' && 'bg-white'} hover:bg-slate-50 cursor-pointer`} onClick={onMenuClick} name="assignments">Assignments</button>
+                    <button className={`py-2 ${selectedMenu === 'calendar' && 'bg-white'} hover:bg-slate-50 cursor-pointer`} onClick={onMenuClick} name="calendar">Calendar</button>
+                    <button className={`py-2 ${selectedMenu === 'payFees' && 'bg-white'} hover:bg-slate-50 cursor-pointer`} onClick={onMenuClick} name="payFees">Pay Fees</button>
                 </div>
             </div>
             <div className='bg-slate-500 text-white shadow-lg text-center text-xl py-2 mb-5 rounded-xl mx-2 cursor-pointer'>Logout</div>
         </section>
         <section className='bg-[#F7F6FB] h-full w-4/5'>
-            <Profile />
+            {selectedMenu === "profile" && <Profile />}
+            {selectedMenu === "timeTable" && <TimeTable />}
+
+
             {/* <Notices /> */}
             {/* <TimeTable /> */}
         </section>

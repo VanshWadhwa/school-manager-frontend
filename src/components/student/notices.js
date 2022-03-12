@@ -1,6 +1,6 @@
 import React from 'react'
 
-function notices() {
+function Notices() {
   return (
     <div>
         <h1 className='text-[#2d2d2e] text-3xl pl-10 mt-14'>Important Notices and Announcements</h1>
@@ -11,4 +11,4 @@ function notices() {
   )
 }
 
-export default notices
+export default Notices
