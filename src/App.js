@@ -10,11 +10,11 @@ import MiniDrawer from "./components/layout/MiniDrawer";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App ">
         {/* <MiniDrawer /> */}
       <SnackbarProvider maxSnack={3}>
         <BrowserRouter>
-          <MiniDrawer />
+          {/* <MiniDrawer /> */}
 
           <Routes>
             <Route path="/" element={<Home />} />
