@@ -13,12 +13,23 @@ import {
   Typography,
 } from "@mui/material";
 import LoginIcon from "@mui/icons-material/Login";
+import { useSnackbar } from "notistack";
+
 import { Box } from "@mui/system";
 import { Link } from "react-router-dom";
 
 const Login = () => {
   const [loading, setLoading] = useState(false);
+  const { enqueueSnackbar, closeSnackbar } = useSnackbar();
 
+  const onSubmit = (e) => {
+    // sendNotification({
+    //   msg: "Loged In",
+    //   variant: "info",
+    // });
+
+    enqueueSnackbar("messge", { variant: "success" });
+  };
   return (
     <Box className="bg-shapes">
       <Container
@@ -39,7 +50,7 @@ const Login = () => {
             <Typography component="h1" variant="h3">
               Login
             </Typography>
-            <Box component="form" noValidate sx={{ mt: 3 }}>
+            <Box component="form" noValidate onSubmit={onSubmit} sx={{ mt: 3 }}>
               <TextField
                 required
                 fullWidth
