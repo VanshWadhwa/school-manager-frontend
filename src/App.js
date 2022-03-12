@@ -1,4 +1,3 @@
-import "./App.css";
 import Login from "./pages/auth/Login.js";
 import Home from "./pages/Home.js";
 
@@ -15,7 +14,6 @@ function App() {
           {/* <Route path="invoices" element={<Invoices />} /> */}
         </Routes>
       </BrowserRouter>
-      ,
     </div>
   );
 }
