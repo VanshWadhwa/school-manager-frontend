@@ -1,6 +1,8 @@
 import Login from "./pages/auth/Login.js";
 import Logout from "./pages/auth/Logout.js";
 import Signup from "./pages/auth/Signup.js";
+import Dashboard from "./pages/school/Dashboard.js";
+
 import { SnackbarProvider } from "notistack";
 
 import Home from "./pages/Home.js";
@@ -20,6 +22,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/logout" element={<Logout />} />
             <Route path="/signup" element={<Signup />} />
+            <Route path="/Dashboard" element={<Dashboard />} />
 
             {/* <Route path="invoices" element={<Invoices />} /> */}
           </Routes>
