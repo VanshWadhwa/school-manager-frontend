@@ -5,6 +5,10 @@ import LogoutIcon from "@mui/icons-material/Logout";
 const Logout = () => {
   const [loading, setLoading] = useState(false);
 
+  const submitLogout = async () => {
+    
+  }
+
   //      --------------------------------------------
   //   Commented this incase you need this stuff
   //   ------------------------------------------------
@@ -73,7 +77,7 @@ const Logout = () => {
               </Typography>
               <br />
               <br />
-              <Button variant="contained" fullWidth endIcon={<LogoutIcon />}>
+              <Button variant="contained" fullWidth endIcon={<LogoutIcon />} onClick={submitLogout}>
                 Logout
               </Button>
             </Paper>
