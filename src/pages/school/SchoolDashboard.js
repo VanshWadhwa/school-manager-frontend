@@ -21,6 +21,7 @@ import Stack from "@mui/material/Stack";
 import { Box } from "@mui/system";
 import { Link } from "react-router-dom";
 import React, { useState } from "react";
+import MiniDrawer from "../../components/layout/MiniDrawer";
 
 const SchoolDashboard = () => {
   const [loading, setloading] = useState(false);
@@ -123,210 +124,200 @@ const SchoolDashboard = () => {
     createData("Reekha", "Science", "-"),
   ];
   return (
-    <Box className="bg-shapes">
-      <Container
-        maxWidth="lg"
-        sx={{ minHeight: "90vh" }}
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          flexDirection: "column",
-        }}
-      >
-        <Grid container component="main">
-          <Typography component="h1" variant="h3">
-            SchoolDashboard
-          </Typography>
-          <Grid item lg={12}>
-            <Paper
-              sx={{
-                m: 2,
-              }}
-            >
-              <Container
+    <React.Fragment>
+      <MiniDrawer />
+      <Box className="bg-shapes">
+        <Container
+          maxWidth="lg"
+          sx={{ minHeight: "90vh" }}
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            flexDirection: "column",
+          }}
+        >
+          <Grid container component="main">
+            <Typography component="h1" variant="h3">
+              SchoolDashboard
+            </Typography>
+            <Grid item lg={12}>
+              <Paper
                 sx={{
-                  p: 1,
+                  m: 2,
                 }}
               >
-                {" "}
-                <TextField
-                  fullWidth
-                  autoFocus
-                  name="email"
-                  type="email"
-                  margin="dense"
-                  label="Search class"
-                  size="small"
-                  id="standard-basic"
-                  variant="standard"
-                  maxWidth
-                />
-                <Grid
-                  container
-                  spacing={1}
+                <Container
                   sx={{
-                    my: 1,
+                    p: 1,
                   }}
                 >
                   {" "}
-                  {classes.map((individualClass) => {
-                    return (
-                      <Grid item>
-                        <Chip
-                          label={individualClass}
-                          variant="outlined"
-                          onClick={() => {}}
-                        />
-                      </Grid>
-                    );
-                  })}
-                </Grid>
-              </Container>
-            </Paper>
-          </Grid>
+                  <TextField
+                    fullWidth
+                    autoFocus
+                    name="email"
+                    type="email"
+                    margin="dense"
+                    label="Search class"
+                    size="small"
+                    id="standard-basic"
+                    variant="standard"
+                    maxWidth
+                  />
+                  <Grid
+                    container
+                    spacing={1}
+                    sx={{
+                      my: 1,
+                    }}
+                  >
+                    {" "}
+                    {classes.map((individualClass) => {
+                      return (
+                        <Grid item>
+                          <Chip
+                            label={individualClass}
+                            variant="outlined"
+                            onClick={() => {}}
+                          />
+                        </Grid>
+                      );
+                    })}
+                  </Grid>
+                </Container>
+              </Paper>
+            </Grid>
 
-          <Grid item lg={6}>
-            <Paper
-              sx={{
-                m: 2,
-              }}
-            >
-              <Container
+            <Grid item lg={6}>
+              <Paper
                 sx={{
-                  p: 1,
+                  m: 2,
                 }}
               >
-                {" "}
-                <Typography component="h6" variant="h6">
-                  Teachers of 12-A
-                </Typography>
-                <TableContainer component={Paper}>
-                  <Table
-                    // sx={{ minWidth: 650 }}
-                    size="small"
-                    aria-label="a dense table"
-                  >
-                    <TableHead>
-                      <TableRow>
-                        <TableCell align="right">Name</TableCell>
-                        <TableCell align="right">Subject</TableCell>
-                        <TableCell align="right">Other Role</TableCell>
-                      </TableRow>
-                    </TableHead>
-                    <TableBody>
-                      {rows.map((row) => (
-                        <TableRow
-                          key={row.name}
-                          sx={{
-                            "&:last-child td, &:last-child th": { border: 0 },
-                          }}
-                        >
-                          <TableCell component="th" scope="row">
-                            {row.name}
-                          </TableCell>
-                          <TableCell align="right">{row.subject}</TableCell>
-                          <TableCell align="right">{row.role}</TableCell>
+                <Container
+                  sx={{
+                    p: 1,
+                  }}
+                >
+                  {" "}
+                  <Typography component="h6" variant="h6">
+                    Teachers of 12-A
+                  </Typography>
+                  <TableContainer component={Paper}>
+                    <Table
+                      // sx={{ minWidth: 650 }}
+                      size="small"
+                      aria-label="a dense table"
+                    >
+                      <TableHead>
+                        <TableRow>
+                          <TableCell align="right">Name</TableCell>
+                          <TableCell align="right">Subject</TableCell>
+                          <TableCell align="right">Other Role</TableCell>
                         </TableRow>
-                      ))}
-                    </TableBody>
-                  </Table>
-                </TableContainer>
-              </Container>
-            </Paper>
-          </Grid>
-          <Grid item lg={6}>
-            <Paper
-              sx={{
-                m: 2,
-              }}
-            >
-              <Container
+                      </TableHead>
+                      <TableBody>
+                        {rows.map((row) => (
+                          <TableRow
+                            key={row.name}
+                            sx={{
+                              "&:last-child td, &:last-child th": { border: 0 },
+                            }}
+                          >
+                            <TableCell component="th" scope="row">
+                              {row.name}
+                            </TableCell>
+                            <TableCell align="right">{row.subject}</TableCell>
+                            <TableCell align="right">{row.role}</TableCell>
+                          </TableRow>
+                        ))}
+                      </TableBody>
+                    </Table>
+                  </TableContainer>
+                </Container>
+              </Paper>
+            </Grid>
+            <Grid item lg={6}>
+              <Paper
                 sx={{
-                  p: 1,
+                  m: 2,
                 }}
               >
-                {" "}
-                <Typography component="h6" variant="h6">
-                  Students of 12 A
-                </Typography>
-                <TextField
-                  required
-                  fullWidth
-                  autoFocus
-                  name="email"
-                  type="email"
-                  margin="dense"
-                  label="Email"
-                  size="small"
-                  id="standard-basic"
-                  variant="standard"
-                  maxWidth
-                />
-                <Divider variant="middle" />
-                <TableContainer component={Paper}>
-                  <Table
-                    sx={{ minWidth: 650 }}
+                <Container
+                  sx={{
+                    p: 1,
+                  }}
+                >
+                  {" "}
+                  <Typography component="h6" variant="h6">
+                    Students of 12 A
+                  </Typography>
+                  <TextField
+                    required
+                    fullWidth
+                    autoFocus
+                    name="email"
+                    type="email"
+                    margin="dense"
+                    label="Email"
                     size="small"
-                    aria-label="a dense table"
-                  >
-                    <TableHead>
-                      <TableRow>
-                        <TableCell>Name</TableCell>
-                        <TableCell align="right">Roll Number</TableCell>
-                        <TableCell align="right">Enroll Number</TableCell>
-                        <TableCell align="right">DOB</TableCell>
-                        <TableCell align="right">Phone Number</TableCell>
-                      </TableRow>
-                    </TableHead>
-                    <TableBody>
-                      {students.map((student) => (
-                        <TableRow
-                          key={student.name}
-                          sx={{
-                            "&:last-child td, &:last-child th": { border: 0 },
-                          }}
-                        >
-                          <TableCell component="th" scope="row">
-                            {student.name}
-                          </TableCell>
-                          <TableCell align="right">
-                            {student.rollNumber}
-                          </TableCell>
-                          <TableCell align="right">
-                            {student.enrollNumber}
-                          </TableCell>
-                          <TableCell align="right">{student.dob}</TableCell>
-                          <TableCell align="right">
-                            {student.phoneNumber}
-                          </TableCell>
+                    id="standard-basic"
+                    variant="standard"
+                    maxWidth
+                  />
+                  <Divider variant="middle" />
+                  <TableContainer component={Paper}>
+                    <Table
+                      sx={{ minWidth: 650 }}
+                      size="small"
+                      aria-label="a dense table"
+                    >
+                      <TableHead>
+                        <TableRow>
+                          <TableCell>Name</TableCell>
+                          <TableCell align="right">Roll Number</TableCell>
+                          <TableCell align="right">Enroll Number</TableCell>
+                          <TableCell align="right">DOB</TableCell>
+                          <TableCell align="right">Phone Number</TableCell>
                         </TableRow>
-                      ))}
-                    </TableBody>
-                  </Table>
-                </TableContainer>
-              </Container>
-            </Paper>
+                      </TableHead>
+                      <TableBody>
+                        {students.map((student) => (
+                          <TableRow
+                            key={student.name}
+                            sx={{
+                              "&:last-child td, &:last-child th": { border: 0 },
+                            }}
+                          >
+                            <TableCell component="th" scope="row">
+                              {student.name}
+                            </TableCell>
+                            <TableCell align="right">
+                              {student.rollNumber}
+                            </TableCell>
+                            <TableCell align="right">
+                              {student.enrollNumber}
+                            </TableCell>
+                            <TableCell align="right">{student.dob}</TableCell>
+                            <TableCell align="right">
+                              {student.phoneNumber}
+                            </TableCell>
+                          </TableRow>
+                        ))}
+                      </TableBody>
+                    </Table>
+                  </TableContainer>
+                </Container>
+              </Paper>
+            </Grid>
+
+            <br />
+
+            <Divider variant="middle" />
           </Grid>
-
-          <br />
-
-          <Divider variant="middle" />
-          <br />
-          <>
-            <Typography component="p" variant="body2">
-              Don't have an account?
-              <Link to="/signup">
-                <Button variant="text" to="/signup">
-                  Sign Up
-                </Button>
-              </Link>
-            </Typography>
-          </>
-
-          {/* </Box> */}
-        </Grid>
-      </Container>
-    </Box>
+        </Container>
+      </Box>
+    </React.Fragment>
   );
 };
 

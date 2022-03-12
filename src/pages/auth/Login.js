@@ -18,6 +18,7 @@ import { Box } from "@mui/system";
 import { Link, useNavigate } from "react-router-dom";
 
 import { loginUser } from "../../features/auth/authSlice";
+import MiniDrawer from "../../components/layout/MiniDrawer";
 
 const Login = () => {
   const [loading, setLoading] = useState(false);
@@ -52,86 +53,89 @@ const Login = () => {
   };
 
   return (
-    <Box className="bg-shapes">
-      <Container
-        component="main"
-        maxWidth="sm"
-        sx={{ minHeight: "90vh" }}
-        style={{ display: "flex", justifyContent: "center" }}
-      >
-        {loading === false && (
-          <Paper
-            style={
-              {
-                // backgroundColor: "pink",
+    <>
+      <MiniDrawer />
+      <Box className="bg-shapes">
+        <Container
+          component="main"
+          maxWidth="sm"
+          sx={{ minHeight: "90vh" }}
+          style={{ display: "flex", justifyContent: "center" }}
+        >
+          {loading === false && (
+            <Paper
+              style={
+                {
+                  // backgroundColor: "pink",
+                }
               }
-            }
-            sx={{ p: 4, m: "auto" }}
-          >
-            <Typography component="h1" variant="h3">
-              Login
-            </Typography>
-            <Box
-              component="form"
-              noValidate
-              sx={{ mt: 3 }}
-              onSubmit={submitLogin}
+              sx={{ p: 4, m: "auto" }}
             >
-              <TextField
-                required
-                fullWidth
-                autoFocus
-                name="email"
-                type="email"
-                margin="dense"
-                variant="outlined"
-                label="Email"
-                size="small"
-                onChange={(e) => setEmail(e.target.value)}
-              />
-              <TextField
-                required
-                fullWidth
-                autoFocus
-                name="password"
-                type="password"
-                margin="dense"
-                variant="outlined"
-                label="Password"
-                size="small"
-                onChange={(e) => setPassword(e.target.value)}
-              />
-              <br />
-              <br />
-
-              <Button
-                variant="contained"
-                type="submit"
-                fullWidth
-                endIcon={<LoginIcon />}
-              >
+              <Typography component="h1" variant="h3">
                 Login
-              </Button>
-            </Box>
-            <br />
-
-            <Divider variant="middle" />
-            <br />
-            <>
-              <Typography component="p" variant="body2">
-                Don't have an account?
-                <Link to="/signup">
-                  <Button variant="text" to="/signup">
-                    Sign Up
-                  </Button>
-                </Link>
               </Typography>
-            </>
-          </Paper>
-        )}
-        {/* </Box> */}
-      </Container>
-    </Box>
+              <Box
+                component="form"
+                noValidate
+                sx={{ mt: 3 }}
+                onSubmit={submitLogin}
+              >
+                <TextField
+                  required
+                  fullWidth
+                  autoFocus
+                  name="email"
+                  type="email"
+                  margin="dense"
+                  variant="outlined"
+                  label="Email"
+                  size="small"
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+                <TextField
+                  required
+                  fullWidth
+                  autoFocus
+                  name="password"
+                  type="password"
+                  margin="dense"
+                  variant="outlined"
+                  label="Password"
+                  size="small"
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+                <br />
+                <br />
+
+                <Button
+                  variant="contained"
+                  type="submit"
+                  fullWidth
+                  endIcon={<LoginIcon />}
+                >
+                  Login
+                </Button>
+              </Box>
+              <br />
+
+              <Divider variant="middle" />
+              <br />
+              <>
+                <Typography component="p" variant="body2">
+                  Don't have an account?
+                  <Link to="/signup">
+                    <Button variant="text" to="/signup">
+                      Sign Up
+                    </Button>
+                  </Link>
+                </Typography>
+              </>
+            </Paper>
+          )}
+          {/* </Box> */}
+        </Container>
+      </Box>
+    </>
   );
 };
 

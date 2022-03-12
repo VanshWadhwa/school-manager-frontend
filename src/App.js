@@ -17,8 +17,7 @@ function App() {
       {/* <MiniDrawer /> */}
       <SnackbarProvider maxSnack={3}>
         <BrowserRouter>
-          <MiniDrawer />
-
+          {/* <MiniDrawer /> */}
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
