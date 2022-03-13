@@ -60,7 +60,7 @@ const SchoolDashboard = () => {
 
   const students = [
     {
-      name: "Rajib Mondal",
+      name: "saifullah rahman",
       rollNumber: "1",
       enrollNumber: "12456",
       dob: "22/1/2002",
@@ -290,7 +290,9 @@ const SchoolDashboard = () => {
                             }}
                           >
                             <TableCell component="th" scope="row">
+                              <Link to="/student/dashboard">
                               {student.name}
+                              </Link>
                             </TableCell>
                             <TableCell align="right">
                               {student.rollNumber}
