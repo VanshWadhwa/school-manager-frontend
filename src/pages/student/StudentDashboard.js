@@ -4,7 +4,6 @@ import Notices from '../../components/student/Notices'
 import Profile from '../../components/student/Profile'
 import TimeTable from '../../components/student/TimeTable'
 
-
 function Dashboard() {
     const [selectedMenu, setSelectedMenu] = useState('profile')
 
@@ -34,9 +33,10 @@ function Dashboard() {
             </div>
             <div className='bg-slate-500 text-white shadow-lg text-center text-xl py-2 mb-5 rounded-xl mx-2 cursor-pointer'>Logout</div>
         </section>
-        <section className='bg-[#F7F6FB] h-full w-4/5'>
+        <section className='bg-[#F7F6FB] h-full w-4/5 overflow-scroll overflow-x-hidden'>
             {selectedMenu === "profile" && <Profile />}
             {selectedMenu === "timeTable" && <TimeTable />}
+            {selectedMenu === "notices" && <Notices />}
 
 
             {/* <Notices /> */}

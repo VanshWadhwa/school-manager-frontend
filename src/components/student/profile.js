@@ -28,7 +28,7 @@ function Profile() {
                     </div>
                 </div>
             </section>
-            <section className='px-20'>
+            <section className='px-20 my-8'>
                 <h1 className='text-xl py-2 border-b-2 mb-2'>Subject Curriculum</h1>
                 <Accordion
                     expanded={expanded === "panel1"}
