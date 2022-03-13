@@ -14,7 +14,7 @@ function Dashboard() {
     }
 
   return (
-    <main className='flex justify-center items-center h-screen w-screen'>
+    <main className='flex justify-center items-center h-screen w-screen overflow-x-hidden'>
         <section className='bg-[#EAEAF7] h-full w-1/5 flex flex-col justify-between'>
             <div className='flex flex-col justify-center mt-10 w-full'>
                 <div className='w-full flex flex-col justify-center'>
