@@ -47,6 +47,30 @@ function App() {
 
           // <Link to="/school/dashboard"></Link>;
           // navigate("/school/dashboard", { replace: true });
+        } else if (commandData.command === "getLogin") {
+          // Call the client code that will react to the received command
+          // navigate("/school/dashboard");
+          // redirectTo("/school/dashboard");
+          window.location.replace(`/login`);
+
+          // <Link to="/school/dashboard"></Link>;
+          // navigate("/school/dashboard", { replace: true });
+        } else if (commandData.command === "getLogout") {
+          // Call the client code that will react to the received command
+          // navigate("/school/dashboard");
+          // redirectTo("/school/dashboard");
+          window.location.replace(`/logout`);
+
+          // <Link to="/school/dashboard"></Link>;
+          // navigate("/school/dashboard", { replace: true });
+        } else if (commandData.command === "getNotice") {
+          // Call the client code that will react to the received command
+          // navigate("/school/dashboard");
+          // redirectTo("/school/dashboard");
+          window.location.replace(`/notice`);
+
+          // <Link to="/school/dashboard"></Link>;
+          // navigate("/school/dashboard", { replace: true });
         }
       },
     });
