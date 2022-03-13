@@ -1,5 +1,6 @@
 import React from 'react'
 import {useState} from 'react'
+import {Link} from 'react-router-dom'
 import Notices from '../../components/student/Notices'
 import Profile from '../../components/student/Profile'
 import TimeTable from '../../components/student/TimeTable'
@@ -31,7 +32,7 @@ function Dashboard() {
                     <button className={`py-2 ${selectedMenu === 'payFees' && 'bg-white'} hover:bg-slate-50 cursor-pointer`} onClick={onMenuClick} name="payFees">Pay Fees</button>
                 </div>
             </div>
-            <div className='bg-slate-500 text-white shadow-lg text-center text-xl py-2 mb-5 rounded-xl mx-2 cursor-pointer'>Logout</div>
+            <div className='bg-slate-500 text-white shadow-lg text-center text-xl py-2 mb-5 rounded-xl mx-2 cursor-pointer'><Link to="/">Logout</Link></div>
         </section>
         <section className='bg-[#F7F6FB] h-full w-4/5 overflow-scroll overflow-x-hidden'>
             {selectedMenu === "profile" && <Profile />}
